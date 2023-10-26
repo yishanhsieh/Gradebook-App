@@ -1,2 +1,2 @@
-# Gradebook-App
-info590-fa2023 cross platform programming
+# INFO-I400/590 Gradebook Application
+    Made in React Native and Firebase
