@@ -1,5 +1,4 @@
 import { Text, View, StyleSheet, Image } from "react-native";
-import { FirebaseFetcher } from "../FirebaseFetcher";
 
 export default function HomePage() {
   return (
@@ -31,7 +30,6 @@ export default function HomePage() {
           `more`button, student's profile page will show. Students' profile page
           and the gradebook page is navigated by StackNavigation.
         </Text>
-        <FirebaseFetcher />
       </View>
     </View>
   );

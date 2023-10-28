@@ -5,7 +5,7 @@ import { collection, getDocs } from "firebase/firestore";
 
 //get students data
 export const FirebaseFetcher = () => {
-  const [students, setStudents] = useState([]);
+  const [gradebook, setGradebook] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,15 +17,11 @@ export const FirebaseFetcher = () => {
       });
       //dbDocs.forEach((doc) => console.log(doc.data()));
       //dbDocs.docs.forEach((doc) => console.log(doc.data())); //why it's the same???
-      setStudents(studentData);
+      setGradebook(studentData);
     };
 
     fetchData();
   }, []);
-  console.log(students);
-  return (
-    <View>
-      <></>
-    </View>
-  );
+
+  console.log(gradebook);
 };

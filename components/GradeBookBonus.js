@@ -1,15 +1,15 @@
 import "react-native-gesture-handler";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { Text, View, FlatList } from "react-native";
 import { useState, useEffect } from "react";
 import GradeBookEntry from "./GradeBookEntry";
 import { db } from "./../firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 
 export default function GradeBookBonus({ navigation }) {
-  /* let students = ["Squidward", "Patrick", "Sandy", "SpongeBob", "Krab"]; */
   const [totalBonusPoints, setTotalBonusPoints] = useState(0);
   const [gradebook, setGradebook] = useState([]); // set students data from firestore
 
+  //get data from firebase
   useEffect(() => {
     const fetchData = async () => {
       const dbCol = collection(db, "students"); //get collection `students`
@@ -17,7 +17,6 @@ export default function GradeBookBonus({ navigation }) {
       const studentData = [];
       dbDocs.forEach((doc) => {
         studentData.push(doc.data());
-        /*  dbDocs.forEach((doc) => console.log(doc.data())); */
       });
       setGradebook(studentData);
     };
@@ -25,7 +24,7 @@ export default function GradeBookBonus({ navigation }) {
     fetchData();
   }, []);
 
-  console.log("gradebook", gradebook); // make sure we can get data from firebase
+  //console.log("gradebook", gradebook); // make sure we can get data from firebase
 
   //Class Bonus Message logic
   let BonusMsg = "No rewards.";

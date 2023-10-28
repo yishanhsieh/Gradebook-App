@@ -44,12 +44,7 @@ export default function GradeBookEntry({
   setTotalBonusPoints,
 }) {
   const navigation = useNavigation();
-
   const [bonusPoints, setBonusPoints] = useState(0);
-  /*  let stuKey = stuName.toLowerCase();
-  const stuImg = gradebook[stuKey].imgUrl;
-  const stuGrade = gradebook[stuKey].grade;
-  const stuAbsence = gradebook[stuKey].absence;   */
 
   return (
     <View style={styles.gradebook}>
