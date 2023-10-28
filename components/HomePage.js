@@ -7,9 +7,7 @@ export default function HomePage() {
         <Text style={styles.heading}>Z101-Driving under Sea</Text>
         <Image
           style={{ width: 150, flex: 0.7 }}
-          source={{
-            uri: "https://static.wikia.nocookie.net/spongebob/images/9/95/Prehibernation_Week_083.png/revision/latest?cb=20200803180753",
-          }}
+          source={require("./../assets/cover.webp")}
         />
       </View>
 
