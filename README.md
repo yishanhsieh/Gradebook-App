@@ -57,6 +57,13 @@ useEffect(() => {
 - resource: https://docs.expo.dev/workflow/web/
 - Install:
 ```npx expo install react-dom react-native-web @expo/webpack-config```
+- SUPER IMPORTANT!!!! add the following config in App.json:
+```
+"web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    }
+```
 - start the dev server, and you are supposed to get a web generated automatically.
 ```npx expo start --web ```
 - Publish your web. Run the following code and you are supposed to have a new folder called `dist`
